@@ -9,8 +9,8 @@ Input files:
 
 Output files_
 
- - new_pulses_merge_A1.npy
- - new_pulses_merge_A2.npy
+ - new_pulses_A1.npy
+ - new_pulses_A2.npy
 
 """
 
