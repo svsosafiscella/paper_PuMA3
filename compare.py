@@ -15,14 +15,10 @@ Output files_
 """
 
 import numpy as np
-from decimal import Decimal
 import csv
 
 pulses_A1 = np.load("pulses_merge_A1.npy")
 pulses_A2 = np.load("pulses_merge_A2.npy")
-
-print(pulses_A1.shape)
-print(pulses_A2.shape)
 
 MJD_A1 = np.loadtxt("MJD_times_A1.csv", usecols=0)
 MJD_A2 = np.loadtxt("MJD_times_A2.csv", usecols=0)
@@ -49,7 +45,6 @@ if MJD_A1[0] < MJD_A2[0]:
 	finish_A2 = m
         print("Finish A1 = " + str(finish_A1))
         print("Finish A2 = " + str(finish_A2))
-
 
 	if(len(MJD_A1[start_A1:finish_A1]) == len(MJD_A2[start_A1:finish_A1])):
 
