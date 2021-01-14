@@ -36,7 +36,7 @@ if MJD_A1[0] < MJD_A2[0]:
 	start_A2 = 0
 	print("Start A1 = " + str(start_A1))
 
-	while n < len(MJD_A1) and m < len(MJD_A2):
+	while n < len(MJD_A1)-1 and m < len(MJD_A2)-1:
 
 		n += 1
 		m += 1
@@ -46,7 +46,7 @@ if MJD_A1[0] < MJD_A2[0]:
         print("Finish A1 = " + str(finish_A1))
         print("Finish A2 = " + str(finish_A2))
 
-	if(len(MJD_A1[start_A1:finish_A1]) == len(MJD_A2[start_A1:finish_A1])):
+	if(len(MJD_A1[start_A1:finish_A1]) == len(MJD_A2[start_A2:finish_A2])):
 
 		print("Funciona")
 
@@ -67,7 +67,7 @@ elif MJD_A1[0] > MJD_A2[0]:
 	start_A2 = m
         print("Start A2 = " + str(start_A2))
 
-        while n < len(MJD_A1) and m < len(MJD_A2):
+        while n < len(MJD_A1)-1 and m < len(MJD_A2)-1:
 
                 n += 1
                 m += 1
@@ -77,7 +77,7 @@ elif MJD_A1[0] > MJD_A2[0]:
         print("Finish A1 = " + str(finish_A1))
         print("Finish A2 = " + str(finish_A2))
 
-        if(len(MJD_A1[start_A1:finish_A1]) == len(MJD_A2[start_A1:finish_A1])):
+        if(len(MJD_A1[start_A1:finish_A1]) == len(MJD_A2[start_A2:finish_A2])):
 
                 print("Funciona")
 
