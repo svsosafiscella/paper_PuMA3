@@ -34,7 +34,6 @@ if MJD_A1[0] < MJD_A2[0]:
 
 	start_A1 = n
 	start_A2 = 0
-	print("Start A1 = " + str(start_A1))
 
 	while n < len(MJD_A1)-1 and m < len(MJD_A2)-1:
 
@@ -43,19 +42,6 @@ if MJD_A1[0] < MJD_A2[0]:
 
 	finish_A1 = n
 	finish_A2 = m
-        print("Finish A1 = " + str(finish_A1))
-        print("Finish A2 = " + str(finish_A2))
-
-	if(len(MJD_A1[start_A1:finish_A1]) == len(MJD_A2[start_A2:finish_A2])):
-
-		print("Funciona")
-
-		np.savetxt("new_pulses_A1.csv", pulses_A1[start_A1:finish_A1,:], delimiter=',')
-		np.savetxt("new_pulses_A2.csv", pulses_A2[start_A2:finish_A2,:], delimiter=',')
-
-                np.save("new_pulses_A1.npy", pulses_A1[start_A1:finish_A1,:])
-                np.save("new_pulses_A2.npy", pulses_A2[start_A2:finish_A2,:])
-
 
 elif MJD_A1[0] > MJD_A2[0]:
 
@@ -65,7 +51,6 @@ elif MJD_A1[0] > MJD_A2[0]:
 
 	start_A1 = 0
 	start_A2 = m
-        print("Start A2 = " + str(start_A2))
 
         while n < len(MJD_A1)-1 and m < len(MJD_A2)-1:
 
@@ -74,17 +59,18 @@ elif MJD_A1[0] > MJD_A2[0]:
 
 	finish_A1 = n
 	finish_A2 = m
-        print("Finish A1 = " + str(finish_A1))
-        print("Finish A2 = " + str(finish_A2))
+	
+print("Length A1 observation = " + str(len(MJD_A1[start_A1:finish_A1]) + " pulses"))
+print("Length A2 observation = " + str(len(MJD_A2[start_A2:finish_A2]) + " pulses"))
 
-        if(len(MJD_A1[start_A1:finish_A1]) == len(MJD_A2[start_A2:finish_A2])):
+if(len(MJD_A1[start_A1:finish_A1]) == len(MJD_A2[start_A2:finish_A2])):
 
-                print("Funciona")
+        print("Funciona")
 
-                np.savetxt("new_pulses_A1.csv", pulses_A1[start_A1:finish_A1,:], delimiter=',')
-                np.savetxt("new_pulses_A2.csv", pulses_A2[start_A2:finish_A2,:], delimiter=',')
+        np.savetxt("new_pulses_A1.csv", pulses_A1[start_A1:finish_A1,:], delimiter=',')
+        np.savetxt("new_pulses_A2.csv", pulses_A2[start_A2:finish_A2,:], delimiter=',')
 
-                np.save("new_pulses_A1.npy", pulses_A1[start_A1:finish_A1,:])
-                np.save("new_pulses_A2.npy", pulses_A2[start_A2:finish_A2,:])
+        np.save("new_pulses_A1.npy", pulses_A1[start_A1:finish_A1,:])
+        np.save("new_pulses_A2.npy", pulses_A2[start_A2:finish_A2,:])
 
 
